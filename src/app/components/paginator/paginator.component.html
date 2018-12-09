@@ -1,6 +1,6 @@
 <div *ngIf="!isLoading">
-  <div class="paginator">
-    <select class="select col-sm-4" [(ngModel)]="countriesByPage" (ngModelChange)="pageChange()">
+  <div class="paginator" id="adjustDisplay">
+    <select class="select col-sm-4" [(ngModel)]="countriesByPage" (ngModelChange)="pageChange()" id="adjustSelect">
       <option value="10" selected>10</option>
       <option value="50">50</option>
       <option value="100">100</option>
@@ -9,3 +9,4 @@
       [boundaryLinks]="true" [pageSize]="countriesByPage" (pageChange)="pageChange()" size="lg">
     </ngb-pagination>
   </div>
+</div>
