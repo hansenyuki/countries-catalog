@@ -1,0 +1,88 @@
+<br />
+
+<div class="container">
+  <h2>{{country?.name}} details</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td rowspan='8'>
+          <img [src]="country?.flag" class="img-thumbnail" id="adjustFlag">
+        </td>
+      </tr>
+      <tr>
+        <td id="attribute">Native name</td>
+        <td>{{country?.nativeName}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Region</td>
+        <td>{{ country?.region }}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Population</td>
+        <td>{{country?.population}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Area</td>
+        <td>{{ country?.area }}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Capital</td>
+        <td>{{country?.capital}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Alpha2Code</td>
+        <td>{{country?.alpha2Code}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Alpha3Code</td>
+        <td>{{country?.alpha3Code}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Sub Region</td>
+        <td>{{country?.subregion}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Demonym</td>
+        <td>{{ country?.demonym }}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Gini</td>
+        <td>{{country?.gini}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Numeric code</td>
+        <td>{{country?.numericCode}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Cioc</td>
+        <td>{{country?.cioc}}</td>
+      </tr>
+      <tr>
+        <td id="attribute">Language</td>
+        <td>
+          {{country?.languages[0].iso639_1}}<br/>
+          {{country?.languages[0].iso639_2}}<br/>
+          {{country?.languages[0].name}}<br/>
+          {{country?.languages[0].nativeName}}<br/>
+        </td>
+      </tr>
+      <tr>
+          <td id="attribute">Currencies</td>
+          <td>
+            {{country?.currencies[0].code}}<br/>
+            {{country?.currencies[0].name}}<br/>
+            {{country?.currencies[0].symbol}}<br/>
+          </td>
+        </tr>
+      <tr>
+        <td id="attribute">Gini</td>
+        <td>{{country?.gini}}</td>
+      </tr>
+      <tr>
+        <td rowspan='3'><button class="btn btn-primary" routerLink="/displayAll">Back</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

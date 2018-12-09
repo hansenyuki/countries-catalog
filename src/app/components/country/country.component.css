@@ -1,0 +1,12 @@
+#adjustFlag {
+    width: 300px;
+}
+
+.module {
+    display: flex;
+    justify-content: center;
+}
+
+#adjustTitle {
+    text-align: center;
+}

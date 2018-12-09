@@ -1,0 +1,49 @@
+<div class="thumbnail">
+  <img [src]="country.flag" class="img-thumbnail" id="adjustFlag">
+
+  <div class="caption">
+    <div *ngIf="!showDetails">
+      <h4>
+        <span class="label label-primary">
+          {{ country.name }}
+        </span>
+      </h4>
+      <h3>
+        <i class="glyphicon glyphicon-tag"></i>
+        {{ country.currencies.name | currency:'USD':true }}
+      </h3>
+      <h4>
+        <i class="glyphicon glyphicon-home"></i>
+        {{ country.region }}
+      </h4>
+      <button class="btn btn-sm btn-success" (click)="inverseShowDetails()">
+        More
+      </button>
+
+    </div>
+
+    <div *ngIf="showDetails">
+      <div class="details">
+        <h4>
+          <span class="label label-primary">
+            Population: {{ country.population }}
+          </span><br />
+          <span class="label label-primary">
+            Area: {{ country.area }}
+          </span><br />
+          <span class="label label-primary">
+            Code: {{ country.alpha2Code }}
+          </span>
+        </h4>
+
+        <button class="btn btn-sm btn-danger" (click)="inverseShowDetails()">
+          Close
+        </button>
+        <button class="btn btn-sm btn-warning" routerLink="/country/{{country.name}}">
+          All Details
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

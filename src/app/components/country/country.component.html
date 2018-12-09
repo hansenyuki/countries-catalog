@@ -1,0 +1,16 @@
+<div *ngIf="!isLoading">
+    <h3 id="adjustTitle">Available Countries</h3>
+    <div class="container">
+        <countries-search></countries-search>
+        <div class="row">
+            <div *ngFor="let country of allCountriesList" class="col-sm-3">
+                <app-country-card [country]="country" class="col-sm-3"></app-country-card>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <countries-paginator (outputCountries)="onChanges($event)"></countries-paginator>
+</div>
+
+<ngx-loading [show]="isLoading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>

@@ -1,0 +1,12 @@
+<div class="searchField">
+  <input type="text" *ngIf="searchText||criteria" [(ngModel)]="searchText" placeholder="Search By" [ngClass]="{'alert-danger' : notFound}">
+  <select [(ngModel)]="criteria">
+    <option value="region">Region</option>
+    <option value="name">Name</option>
+    <option value="code">Code</option>
+    <option value="currency">Currency</option>
+    <option value="capitalCity">Capital city</option>
+  </select>
+  <button class="btn btn-info" (click)="search()" *ngIf="searchText && criteria">Search</button>
+  <button class="btn btn-info" (click)="clearSearch()" *ngIf="searchText||criteria">Clear</button>
+</div>
